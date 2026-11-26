@@ -5,3 +5,4 @@ public/fonts/
 blender/preview-*.png
 !blender/preview-three4.png
 public/js/shoe3d.min.js
+blender/*.blend1
