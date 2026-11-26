@@ -16,6 +16,9 @@ const vendor = [
   ["gsap/dist/ScrollTrigger.min.js", "vendor/ScrollTrigger.min.js"],
   ["swiper/swiper-bundle.min.js", "vendor/swiper-bundle.min.js"],
   ["swiper/swiper-bundle.min.css", "vendor/swiper-bundle.min.css"],
+  ["three/examples/jsm/libs/draco/gltf/draco_decoder.wasm", "vendor/draco/draco_decoder.wasm"],
+  ["three/examples/jsm/libs/draco/gltf/draco_wasm_wrapper.js", "vendor/draco/draco_wasm_wrapper.js"],
+  ["three/examples/jsm/libs/draco/gltf/draco_decoder.js", "vendor/draco/draco_decoder.js"],
   ["@fontsource/yeseva-one/files/yeseva-one-cyrillic-400-normal.woff2", "fonts/yeseva-cyr.woff2"],
   ["@fontsource/yeseva-one/files/yeseva-one-latin-400-normal.woff2", "fonts/yeseva-lat.woff2"],
   ...[400, 500, 600, 700].flatMap((w) => [
@@ -30,6 +33,21 @@ for (const [from, to] of vendor) {
   await copyFile(join(nm, from), dest);
 }
 console.log(`vendor: ${vendor.length} files`);
+
+// 3D-просмотрщик туфли: three.js + аддоны собираются в один минифицированный модуль
+{
+  const esbuild = await import("esbuild");
+  await esbuild.build({
+    entryPoints: [join(root, "src/shoe3d.js")],
+    outfile: join(pub, "js/shoe3d.min.js"),
+    bundle: true,
+    minify: true,
+    format: "esm",
+    target: ["es2020"],
+    legalComments: "none",
+  });
+  console.log("shoe3d bundled");
+}
 
 // Админка получает тот же набор объёмных иконок, что и сайт.
 {

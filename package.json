@@ -11,8 +11,10 @@
     "@fontsource/yeseva-one": "^5.3.0",
     "@netlify/blobs": "^11.1.11",
     "@netlify/functions": "^6.1.2",
+    "esbuild": "^0.28.2",
     "gsap": "^3.15.1",
     "html5-boilerplate": "^9.0.1",
-    "swiper": "^14.4.0"
+    "swiper": "^14.4.0",
+    "three": "^0.187.0"
   }
 }
