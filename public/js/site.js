@@ -335,7 +335,7 @@
       new Swiper("#works-swiper", {
         slidesPerView: "auto", spaceBetween: 18, grabCursor: true, keyboard: { enabled: true },
         navigation: { nextEl: ".works__next", prevEl: ".works__prev" },
-        pagination: { el: ".works__pagination", clickable: true, dynamicBullets: true },
+        pagination: { el: ".works__pagination", type: "fraction" },
         a11y: { prevSlideMessage: "Назад", nextSlideMessage: "Вперёд", paginationBulletMessage: "Слайд {{index}}" },
       });
     }

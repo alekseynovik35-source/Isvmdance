@@ -260,7 +260,7 @@ img { max-width: 100%; }
 .work--embed { width: min(86vw, 380px); }
 .work--embed .work__img { aspect-ratio: auto; min-height: 200px; background: var(--white); padding: 4px; }
 .works__nav { display: flex; align-items: center; justify-content: center; gap: 16px; margin-top: 22px; }
-.works__pagination { position: static !important; width: auto !important; }
+.works__pagination { position: static !important; width: auto !important; min-width: 64px; text-align: center; font-weight: 600; color: var(--wine); font-variant-numeric: tabular-nums; }
 .swiper-pagination-bullet { background: var(--cherry) !important; }
 .works__more { margin-top: 24px; text-align: center; }
 
