@@ -201,6 +201,7 @@
     $("#signup-form").hidden = true;
     const d = $("#done");
     $("#done-text").textContent = text;
+    $("#done-title").textContent = msg ? "Почти готово" : "Заявка отправлена";
     d.querySelector(".done__msg")?.remove();
     if (msg) { const pre = document.createElement("p"); pre.className = "done__msg"; pre.textContent = msg; $("#done-text").after(pre); }
     d.hidden = false; d.focus();

@@ -79,7 +79,8 @@ img { max-width: 100%; }
 .ribbon__close svg { width: 20px; height: 20px; }
 
 /* ---------- шапка ---------- */
-.top { position: sticky; top: 0; z-index: 40; display: flex; align-items: center; gap: 20px; padding: 12px var(--pad); background: rgba(255, 246, 248, .86); backdrop-filter: saturate(1.4) blur(14px); -webkit-backdrop-filter: saturate(1.4) blur(14px); border-bottom: 1px solid transparent; transition: border-color .2s; }
+.top { position: sticky; top: 0; z-index: 40; display: flex; align-items: center; gap: 20px; padding: 12px var(--pad); border-bottom: 1px solid transparent; transition: border-color .2s; }
+.top::before { content: ""; position: absolute; inset: 0; z-index: -1; background: rgba(255, 246, 248, .86); backdrop-filter: saturate(1.4) blur(14px); -webkit-backdrop-filter: saturate(1.4) blur(14px); }
 .top.is-scrolled { border-color: rgba(161, 13, 51, .12); }
 .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--wine); margin-right: auto; }
 .brand__logo { width: 40px; height: 40px; border-radius: 50%; object-fit: cover; box-shadow: 0 0 0 2px var(--white), 0 0 0 4px var(--petal); background: var(--blush); }
