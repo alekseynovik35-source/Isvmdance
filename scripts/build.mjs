@@ -3,6 +3,7 @@
 import { mkdir, copyFile, writeFile, readFile, access } from "node:fs/promises";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
+import { DEFAULT_CONTENT } from "../netlify/lib/core.mjs";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
 const pub = join(root, "public");
@@ -29,6 +30,23 @@ for (const [from, to] of vendor) {
   await copyFile(join(nm, from), dest);
 }
 console.log(`vendor: ${vendor.length} files`);
+
+// Админка получает тот же набор объёмных иконок, что и сайт.
+{
+  const index = await readFile(join(pub, "index.html"), "utf8");
+  const sprite = index.match(/<svg class="sprite"[\s\S]*?<\/svg>\n/)[0];
+  const tpl = await readFile(join(root, "scripts/admin.template.html"), "utf8");
+  await mkdir(join(pub, "admin"), { recursive: true });
+  await writeFile(join(pub, "admin/index.html"), tpl.replace("<!--SPRITE-->", sprite));
+}
+
+// Статическая копия контента — для хостинга без серверных функций (GitHub Pages).
+await mkdir(join(pub, "data"), { recursive: true });
+const staticContent = {
+  ...DEFAULT_CONTENT,
+  groups: DEFAULT_CONTENT.groups.map((g) => ({ ...g, spotsLeft: Math.max(0, g.capacity - g.bookedOffline) })),
+};
+await writeFile(join(pub, "data/content.json"), JSON.stringify(staticContent, null, 1));
 
 const UA = "Mozilla/5.0 (compatible; isvm-site-build/1.0)";
 const decode = (s) =>
