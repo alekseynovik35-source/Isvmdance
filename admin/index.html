@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Админ-панель ISV.M</title>
+  <link rel="icon" href="../icon.svg" type="image/svg+xml">
+  <meta name="theme-color" content="#3B0716">
+  <link rel="stylesheet" href="../vendor/h5bp.css">
+  <link rel="stylesheet" href="../css/site.css">
+  <link rel="stylesheet" href="../css/admin.css">
+</head>
+<body class="adm">
+<svg class="sprite" aria-hidden="true" width="0" height="0" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <linearGradient id="lac-cherry" x1="0" y1="0" x2=".4" y2="1"><stop offset="0" stop-color="#F2557E"/><stop offset=".55" stop-color="#B0123B"/><stop offset="1" stop-color="#7A0A27"/></linearGradient>
+      <linearGradient id="lac-pink" x1="0" y1="0" x2=".4" y2="1"><stop offset="0" stop-color="#FF9DBB"/><stop offset=".55" stop-color="#E0457A"/><stop offset="1" stop-color="#A82558"/></linearGradient>
+      <linearGradient id="lac-plum" x1="0" y1="0" x2=".4" y2="1"><stop offset="0" stop-color="#C99BEA"/><stop offset=".55" stop-color="#8445B0"/><stop offset="1" stop-color="#53246F"/></linearGradient>
+      <linearGradient id="lac-teal" x1="0" y1="0" x2=".4" y2="1"><stop offset="0" stop-color="#8FE3D3"/><stop offset=".55" stop-color="#2E9C8A"/><stop offset="1" stop-color="#14594F"/></linearGradient>
+      <linearGradient id="lac-gold" x1="0" y1="0" x2=".4" y2="1"><stop offset="0" stop-color="#FFE29A"/><stop offset=".55" stop-color="#D79B2E"/><stop offset="1" stop-color="#8E5C12"/></linearGradient>
+      <linearGradient id="gloss" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".85"/><stop offset=".42" stop-color="#fff" stop-opacity=".12"/><stop offset=".5" stop-color="#fff" stop-opacity="0"/></linearGradient>
+
+      <path id="p-heel" d="M5 36c0-5 5-7 10-7c6 0 10-4 14-10l4-7c1-2 4-2 6-1l3 2c1 1 1 3 0 4l-2 3l-1 22h-2.5l-1-19C32 30 25 37 16 38H8c-2 0-3-1-3-2Z"/>
+      <path id="p-cal" fill-rule="evenodd" d="M10 11h28a4 4 0 0 1 4 4v23a4 4 0 0 1-4 4H10a4 4 0 0 1-4-4V15a4 4 0 0 1 4-4Zm2 12v13h24V23ZM15 5h4v9h-4Zm14 0h4v9h-4Z"/>
+      <path id="p-play" fill-rule="evenodd" d="M24 5a19 19 0 1 1 0 38a19 19 0 0 1 0-38Zm-5 11v16l13-8Z"/>
+      <path id="p-pin" fill-rule="evenodd" d="M24 4c8 0 14 6 14 14c0 10-14 26-14 26S10 28 10 18c0-8 6-14 14-14Zm0 8a6 6 0 1 0 0 12a6 6 0 0 0 0-12Z"/>
+      <path id="p-clock" fill-rule="evenodd" d="M24 5a19 19 0 1 1 0 38a19 19 0 0 1 0-38Zm-2.5 8v13.5l10 6l2-3.4l-7.5-4.6V13Z"/>
+      <path id="p-users" d="M18 7a7.5 7.5 0 1 1 0 15a7.5 7.5 0 0 1 0-15Zm14.5 3a6 6 0 1 1 0 12a6 6 0 0 1 0-12ZM3 41c0-8.5 6.5-15 15-15s15 6.5 15 15Zm32 0c0-5-1.5-9.5-4.4-12.8c.6-.1 1.2-.2 1.9-.2c6.5 0 11.5 5.5 11.5 13Z"/>
+      <path id="p-doc" fill-rule="evenodd" d="M12 4h17l11 11v25a4 4 0 0 1-4 4H12a4 4 0 0 1-4-4V8a4 4 0 0 1 4-4Zm16 3v9h9ZM14 24v3h20v-3Zm0 7v3h14v-3Z"/>
+      <path id="p-music" d="M38 4v27a7 7 0 1 1-4-6.3V13l-15 3.2V35a7 7 0 1 1-4-6.3V9Z"/>
+      <path id="p-spark" d="M24 3c2 11 6 16 21 21c-15 5-19 10-21 21c-2-11-6-16-21-21c15-5 19-10 21-21Z"/>
+      <path id="p-tg" fill-rule="evenodd" d="M42.5 6.3L4 21.4c-1.6.6-1.5 2.9.1 3.4l9.6 3l3.7 11.7c.4 1.4 2.1 1.8 3.1.7l5.4-5.4l9.7 7.2c1.2.9 3 .2 3.3-1.3L46.3 9.6c.4-2.2-1.7-4-3.8-3.3ZM19 28.5l16-13.2L21.7 31.1l-.5 5.6Z"/>
+      <path id="p-rub" fill-rule="evenodd" d="M15 6h12.5a10 10 0 0 1 0 20H20v4h12v4H20v8h-5v-8h-5v-4h5v-4h-5v-4h5Zm5 4v12h7.5a6 6 0 0 0 0-12Z"/>
+      <path id="p-sun" fill-rule="evenodd" d="M24 13a11 11 0 1 1 0 22a11 11 0 0 1 0-22ZM22 2h4v7h-4Zm0 37h4v7h-4ZM2 22h7v4H2Zm37 0h7v4h-7ZM7.6 10.4l2.8-2.8l5 5l-2.8 2.8Zm25 25l2.8-2.8l5 5l-2.8 2.8Zm-25 2.2l5-5l2.8 2.8l-5 5Zm25-25l5-5l2.8 2.8l-5 5Z"/>
+      <path id="p-check" fill-rule="evenodd" d="M24 5a19 19 0 1 1 0 38a19 19 0 0 1 0-38Zm-3 24.6l-6-6l-2.8 2.8l8.8 8.8l15-15l-2.8-2.8Z"/>
+      <path id="p-chat" d="M9 7h30a5 5 0 0 1 5 5v19a5 5 0 0 1-5 5H23l-11 8v-8H9a5 5 0 0 1-5-5V12a5 5 0 0 1 5-5Z"/>
+      <path id="p-lock" fill-rule="evenodd" d="M14 20v-6a10 10 0 0 1 20 0v6h2a4 4 0 0 1 4 4v16a4 4 0 0 1-4 4H12a4 4 0 0 1-4-4V24a4 4 0 0 1 4-4Zm5 0h10v-6a5 5 0 0 0-10 0Z"/>
+      <path id="p-cam" fill-rule="evenodd" d="M16 10l3-4h10l3 4h8a4 4 0 0 1 4 4v22a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4V14a4 4 0 0 1 4-4Zm8 6.5a8.5 8.5 0 1 0 0 17a8.5 8.5 0 0 0 0-17Z"/>
+      <path id="p-star" d="M24 3l6 13l14 1.6l-10.5 9.4l3 14L24 34l-12.5 7l3-14L4 17.6L18 16Z"/>
+      <path id="p-chart" d="M5 40h38v4H5ZM8 25h7v13H8Zm11.5-10h7v23h-7ZM31 6h7v32h-7Z"/>
+    </defs>
+    <!-- Объёмная 2D-иконка: тень-«экструзия», лаковая заливка, блик -->
+    <symbol id="i-heel" viewBox="-2 -2 52 52"><use href="#p-heel" transform="translate(1.6 2.4)" style="fill:var(--ic-back,#5E0620)"/><use href="#p-heel" style="fill:var(--ic-fill,url(#lac-cherry))"/><use href="#p-heel" fill="url(#gloss)"/></symbol>
+    <symbol id="i-cal" viewBox="-2 -2 52 52"><use href="#p-cal" transform="translate(1.6 2.4)" style="fill:var(--ic-back,#5E0620)"/><use href="#p-cal" style="fill:var(--ic-fill,url(#lac-cherry))"/><use href="#p-cal" fill="url(#gloss)"/></symbol>
+    <symbol id="i-play" viewBox="-2 -2 52 52"><use href="#p-play" transform="translate(1.6 2.4)" style="fill:var(--ic-back,#5E0620)"/><use href="#p-play" style="fill:var(--ic-fill,url(#lac-cherry))"/><use href="#p-play" fill="url(#gloss)"/></symbol>
+    <symbol id="i-pin" viewBox="-2 -2 52 52"><use href="#p-pin" transform="translate(1.6 2.4)" style="fill:var(--ic-back,#5E0620)"/><use href="#p-pin" style="fill:var(--ic-fill,url(#lac-cherry))"/><use href="#p-pin" fill="url(#gloss)"/></symbol>
+    <symbol id="i-clock" viewBox="-2 -2 52 52"><use href="#p-clock" transform="translate(1.6 2.4)" style="fill:var(--ic-back,#5E0620)"/><use href="#p-clock" style="fill:var(--ic-fill,url(#lac-cherry))"/><use href="#p-clock" fill="url(#gloss)"/></symbol>
+    <symbol id="i-users" viewBox="-2 -2 52 52"><use href="#p-users" transform="translate(1.6 2.4)" style="fill:var(--ic-back,#5E0620)"/><use href="#p-users" style="fill:var(--ic-fill,url(#lac-cherry))"/><use href="#p-users" fill="url(#gloss)"/></symbol>
+    <symbol id="i-doc" viewBox="-2 -2 52 52"><use href="#p-doc" transform="translate(1.6 2.4)" style="fill:var(--ic-back,#5E0620)"/><use href="#p-doc" style="fill:var(--ic-fill,url(#lac-cherry))"/><use href="#p-doc" fill="url(#gloss)"/></symbol>
+    <symbol id="i-music" viewBox="-2 -2 52 52"><use href="#p-music" transform="translate(1.6 2.4)" style="fill:var(--ic-back,#5E0620)"/><use href="#p-music" style="fill:var(--ic-fill,url(#lac-cherry))"/><use href="#p-music" fill="url(#gloss)"/></symbol>
+    <symbol id="i-spark" viewBox="-2 -2 52 52"><use href="#p-spark" transform="translate(1.6 2.4)" style="fill:var(--ic-back,#5E0620)"/><use href="#p-spark" style="fill:var(--ic-fill,url(#lac-cherry))"/><use href="#p-spark" fill="url(#gloss)"/></symbol>
+    <symbol id="i-tg" viewBox="-2 -2 52 52"><use href="#p-tg" transform="translate(1.6 2.4)" style="fill:var(--ic-back,#5E0620)"/><use href="#p-tg" style="fill:var(--ic-fill,url(#lac-cherry))"/><use href="#p-tg" fill="url(#gloss)"/></symbol>
+    <symbol id="i-rub" viewBox="-2 -2 52 52"><use href="#p-rub" transform="translate(1.6 2.4)" style="fill:var(--ic-back,#5E0620)"/><use href="#p-rub" style="fill:var(--ic-fill,url(#lac-cherry))"/><use href="#p-rub" fill="url(#gloss)"/></symbol>
+    <symbol id="i-sun" viewBox="-2 -2 52 52"><use href="#p-sun" transform="translate(1.6 2.4)" style="fill:var(--ic-back,#5E0620)"/><use href="#p-sun" style="fill:var(--ic-fill,url(#lac-cherry))"/><use href="#p-sun" fill="url(#gloss)"/></symbol>
+    <symbol id="i-check" viewBox="-2 -2 52 52"><use href="#p-check" transform="translate(1.6 2.4)" style="fill:var(--ic-back,#5E0620)"/><use href="#p-check" style="fill:var(--ic-fill,url(#lac-cherry))"/><use href="#p-check" fill="url(#gloss)"/></symbol>
+    <symbol id="i-chat" viewBox="-2 -2 52 52"><use href="#p-chat" transform="translate(1.6 2.4)" style="fill:var(--ic-back,#5E0620)"/><use href="#p-chat" style="fill:var(--ic-fill,url(#lac-cherry))"/><use href="#p-chat" fill="url(#gloss)"/></symbol>
+    <symbol id="i-lock" viewBox="-2 -2 52 52"><use href="#p-lock" transform="translate(1.6 2.4)" style="fill:var(--ic-back,#5E0620)"/><use href="#p-lock" style="fill:var(--ic-fill,url(#lac-cherry))"/><use href="#p-lock" fill="url(#gloss)"/></symbol>
+    <symbol id="i-cam" viewBox="-2 -2 52 52"><use href="#p-cam" transform="translate(1.6 2.4)" style="fill:var(--ic-back,#5E0620)"/><use href="#p-cam" style="fill:var(--ic-fill,url(#lac-cherry))"/><use href="#p-cam" fill="url(#gloss)"/></symbol>
+    <symbol id="i-star" viewBox="-2 -2 52 52"><use href="#p-star" transform="translate(1.6 2.4)" style="fill:var(--ic-back,#5E0620)"/><use href="#p-star" style="fill:var(--ic-fill,url(#lac-cherry))"/><use href="#p-star" fill="url(#gloss)"/></symbol>
+    <symbol id="i-chart" viewBox="-2 -2 52 52"><use href="#p-chart" transform="translate(1.6 2.4)" style="fill:var(--ic-back,#5E0620)"/><use href="#p-chart" style="fill:var(--ic-fill,url(#lac-cherry))"/><use href="#p-chart" fill="url(#gloss)"/></symbol>
+    <symbol id="u-chev" viewBox="0 0 24 24"><path d="M6 9l6 6l6-6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="u-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></symbol>
+    <symbol id="u-left" viewBox="0 0 24 24"><path d="M15 6l-6 6l6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="u-right" viewBox="0 0 24 24"><path d="M9 6l6 6l-6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  </svg>
+
+  <div id="app" aria-live="polite">
+    <div class="adm-center"><p>Загрузка…</p></div>
+  </div>
+  <div class="toast" id="toast" role="status" hidden></div>
+  <script src="../vendor/gsap.min.js" defer></script>
+  <script src="../js/admin.js" defer></script>
+</body>
+</html>

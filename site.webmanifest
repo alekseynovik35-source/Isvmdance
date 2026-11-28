@@ -1,0 +1,9 @@
+{
+  "short_name": "ISV.M",
+  "name": "ISV.M — танцы на каблуках",
+  "icons": [{ "src": "icon.svg", "type": "image/svg+xml", "sizes": "any" }],
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#FFF6F8",
+  "theme_color": "#A10D33"
+}
